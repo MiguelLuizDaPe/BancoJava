@@ -1,8 +1,8 @@
-import java.util.ArrayList;
+import java.util.List;
 public class Principal {
 
-ArrayList<Cliente> clientes;
-ArrayList<TransacaoBancaria> transacoes;
+List<Cliente> clientes;
+List<TransacaoBancaria> transacoes;
 	
 
 }

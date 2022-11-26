@@ -9,8 +9,16 @@ public class TransferenciaDeFundos extends TransacaoBancaria{
 		this.valorDaTransferencia = valorDaTransferencia;
 	}
 
-	public void transacao(Cliente fornecedor, Cliente recebedor, int quanto){
-		super.transacao(fornecedor, recebedor, quanto);
+	@Override
+	public void transacao(){
+		int fornDin = this.fornecedor.getDinheiro();
+		int receDin = this.recebedor.getDinheiro();
+
+		fornDin -= this.valorDaTransferencia;
+		receDin += this.valorDaTransferencia;
+
+		this.fornecedor.setDinheiro(fornDin);
+		this.recebedor.setDinheiro(receDin);
 	}
 
 	@Override

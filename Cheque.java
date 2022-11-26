@@ -9,8 +9,16 @@ public class Cheque extends TransacaoBancaria{
 		this.valorDoCheque = valorDoCheque;
 	}
 
-	public void transacao(Cliente fornecedor, Cliente recebedor, int quanto){
-		super.transacao(fornecedor, recebedor, quanto);
+	@Override
+	public void transacao(){
+		int fornDin = this.fornecedor.getDinheiro();
+		int receDin = this.recebedor.getDinheiro();
+
+		fornDin -= this.valorDoCheque;
+		receDin += this.valorDoCheque;
+
+		this.fornecedor.setDinheiro(fornDin);
+		this.recebedor.setDinheiro(receDin);
 	}
 
 	@Override
