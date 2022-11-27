@@ -1,6 +1,6 @@
 public abstract class TransacaoBancaria {
 	
-	public void transacao(){}
+	public void transacionar(){}
 
 	public String detalhar(){
 		return "yes";

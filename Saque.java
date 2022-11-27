@@ -12,7 +12,7 @@ public class Saque extends TransacaoBancaria{
 	}
 
 	@Override
-	public void transacao(){
+	public void transacionar(){
 		int clienteDin = this.cliente.getDinheiro();
 		clienteDin -= this.valorTirado;
 		this.cliente.setDinheiro(clienteDin);

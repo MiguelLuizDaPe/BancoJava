@@ -10,7 +10,7 @@ public class Cheque extends TransacaoBancaria{
 	}
 
 	@Override
-	public void transacao(){
+	public void transacionar(){
 		int fornDin = this.fornecedor.getDinheiro();
 		int receDin = this.recebedor.getDinheiro();
 
